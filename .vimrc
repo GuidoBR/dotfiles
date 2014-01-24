@@ -23,7 +23,7 @@ set wildmode=longest,list
 set wildignore=*.o,*~,*.pyc
 
 " Aumentando a quantidade de comandos que o VIM se lembra
-set history = 500
+set history =500
 " Tratar linhas longas como se fossem duas linhas. Útil na hora de mover entre elas
 map j gj
 map k gk
