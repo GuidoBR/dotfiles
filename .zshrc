@@ -11,6 +11,8 @@ ZSH_THEME="murilasso"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias zshconfig="vim ~/.zshrc"
 alias lsd="ls -gABtrh --group-directories-first | sed 's/^.\{19\}//'"
+alias trabalha="./yiic worker umTrabalho"
+alias naotrabalha="./yiic worker limpaFila"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
