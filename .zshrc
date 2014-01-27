@@ -6,10 +6,11 @@ ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="murilasso"
-
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias zshconfig="vim ~/.zshrc"
+alias lsd="ls -gABtrh --group-directories-first | sed 's/^.\{19\}//'"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"

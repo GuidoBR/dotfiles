@@ -28,6 +28,9 @@ set history =500
 map j gj
 map k gk
 
+" tells vim to show you matching opening or closing brackets when you step on a bracket with your cursor.
+set showmatch
+
 """""""""""""""""""
 " Cores e Fontes
 """""""""""""""""""
@@ -59,3 +62,9 @@ set smarttab
 " 1 TAB equivale a 4 espaços
 set shiftwidth=4
 set tabstop=4
+
+" tells vim to use the previous line's indent level to set the indent level of the new lines.
+set autoindent
+" lets vim make an educated guess based on the content of the previous line.
+set smartindent
+
