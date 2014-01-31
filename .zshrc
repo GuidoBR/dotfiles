@@ -13,9 +13,11 @@ alias zshconfig="vim ~/.zshrc"
 alias lsd="ls -gABtrh --group-directories-first | sed 's/^.\{19\}//'"
 alias trabalha="./yiic worker umTrabalho"
 alias naotrabalha="./yiic worker limpaFila"
-alias testes="phpunit unit/ > ~/Área\ de\ Trabalho/teste.log"
+alias testes="phpunit unit/ | less"
 alias testdox="phpunit --testdox unit/"
 alias testcoverage="phpunit --coverage-html ./report unit/"
+alias migra="./yiic migrate up"
+alias gstat="git status"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
