@@ -13,7 +13,7 @@ alias zshconfig="vim ~/.zshrc"
 alias lsd="ls -gABtrh --group-directories-first | sed 's/^.\{19\}//'"
 alias trabalha="./yiic worker umTrabalho"
 alias naotrabalha="./yiic worker limpaFila"
-alias testes="phpunit unit/ | less"
+alias testes="phpunit unit/"
 alias testdox="phpunit --testdox unit/"
 alias testcoverage="phpunit --coverage-html ./report unit/"
 alias migra="./yiic migrate up"
@@ -74,4 +74,4 @@ export PATH="/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
-
+fortune
