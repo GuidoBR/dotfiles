@@ -75,3 +75,6 @@ export PATH="/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
+fortune
+
+#PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
