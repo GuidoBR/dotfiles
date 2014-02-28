@@ -34,7 +34,7 @@ set showmatch
 """""""""""""""""""
 " Cores e Fontes
 """""""""""""""""""
-colorscheme desert
+colorscheme elflord
 set background=dark
 
 " Usar UTF-8 por padrão
