@@ -18,6 +18,7 @@ alias testdox="phpunit --testdox unit/"
 alias testcoverage="phpunit --coverage-html ./report unit/"
 alias migra="./yiic migrate up"
 alias gstat="git status"
+alias df="df -h"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
