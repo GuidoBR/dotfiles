@@ -17,9 +17,12 @@ alias testes="phpunit unit/"
 alias testdox="phpunit --testdox unit/"
 alias testcoverage="phpunit --coverage-html ./report unit/"
 alias migra="./yiic migrate up"
-alias gstat="git status"
 alias df="df -h"
 alias gp="| grep -i"
+alias gitteste="git checkout teste"
+alias gitmaster="git checkout master"
+alias criarbranch="git checkout -b"
+alias gstat="git status"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
