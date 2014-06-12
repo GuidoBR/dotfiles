@@ -23,6 +23,8 @@ alias gitmaster="git checkout master"
 alias criarbranch="git checkout -b"
 alias gstat="git status"
 alias vermemoria="free -h | grep -v 'cache:' | grep -v 'Swap:'"
+alias atualizateste="git pull origin teste"
+alias atualizamaster="git pull origin master"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
