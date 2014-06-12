@@ -6,3 +6,7 @@
 	email = guidopercu@gmail.com
 [color]
 	ui = true
+[core]
+    editor = vim
+[push]
+    default = simple
