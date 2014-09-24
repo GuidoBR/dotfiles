@@ -16,7 +16,6 @@ alias naotrabalha="./yiic worker limpaFila"
 alias testes="phpunit unit/"
 alias testdox="phpunit --testdox unit/"
 alias testcoverage="phpunit --coverage-html ./report unit/"
-alias migra="./yiic migrate up"
 alias df="df -h"
 alias gitteste="git checkout teste"
 alias gitmaster="git checkout master"
@@ -25,6 +24,7 @@ alias gstat="git status"
 alias vermemoria="free -h | grep -v 'cache:' | grep -v 'Swap:'"
 alias atualizateste="git checkout teste ; git pull origin teste"
 alias atualizamaster="git checkout master ; git pull origin master"
+alias migrationcompleta="echo 'Atualizando Banco Principal' ; ./yiic migrate ; echo 'Atualizando Banco Teste' ; ./yiic migrate --connectionID=testDb"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -81,6 +81,5 @@ export PATH="/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
-
 #PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 #fortune
