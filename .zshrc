@@ -11,14 +11,14 @@ ZSH_THEME="nanotech"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias zshconfig="vim ~/.zshrc"
 alias lsd="ls -lrth --group-directories-first"
-alias trabalha="./yiic worker umTrabalho"
-alias naotrabalha="./yiic worker limpaFila"
+alias trabalha="yiic worker umTrabalho"
+alias naotrabalha="yiic worker limpaFila"
 alias testes="phpunit unit/"
 alias testdox="phpunit --testdox unit/"
 alias testcoverage="phpunit --coverage-html ./report unit/"
 alias df="df -h"
-alias gitteste="git checkout teste"
-alias gitmaster="git checkout master"
+alias gteste="git checkout teste"
+alias gmaster="git checkout master"
 alias criarbranch="git checkout -b"
 alias gstat="git status"
 alias vermemoria="free -h | grep -v 'cache:' | grep -v 'Swap:'"
@@ -60,7 +60,7 @@ HIST_STAMPS="yyyy/mm/dd"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(git, common-aliases, yii)
 
 source $ZSH/oh-my-zsh.sh
 
