@@ -11,21 +11,21 @@ ZSH_THEME="nanotech"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias zshconfig="vim ~/.zshrc"
 alias lsd="ls -lrth --group-directories-first"
-alias trabalha="./yiic worker umTrabalho"
-alias naotrabalha="./yiic worker limpaFila"
+alias trabalha="yiic worker umTrabalho"
+alias naotrabalha="yiic worker limpaFila"
 alias testes="phpunit unit/"
 alias testdox="phpunit --testdox unit/"
 alias testcoverage="phpunit --coverage-html ./report unit/"
-alias migra="./yiic migrate up"
 alias df="df -h"
-alias gitteste="git checkout teste"
-alias gitmaster="git checkout master"
+alias gteste="git checkout teste"
+alias gmaster="git checkout master"
 alias criarbranch="git checkout -b"
 alias gstat="git status"
 alias vermemoria="free -h | grep -v 'cache:' | grep -v 'Swap:'"
-alias atualizateste="git pull origin teste"
-alias atualizamaster="git pull origin master"
 alias iplocal= "ip a s wlan0 | awk -F'[/ ]+' '/inet[^6]/{print $3}'"
+alias atualizateste="git checkout teste ; git pull origin teste"
+alias atualizamaster="git checkout master ; git pull origin master"
+alias migrationcompleta="echo 'Atualizando Banco Principal' ; ./yiic migrate ; echo 'Atualizando Banco Teste' ; ./yiic migrate --connectionID=testDb"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -61,7 +61,7 @@ HIST_STAMPS="yyyy/mm/dd"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(git, common-aliases, yii)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -82,7 +82,6 @@ export PATH="/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
-
 #PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export WORKON_HOME=$HOME/Documentos/virtualenvs/
 export PROJECT_HOME=$HOME/Documentos/Projetos/

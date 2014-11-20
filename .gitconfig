@@ -1,6 +1,7 @@
 [alias]
 	undo = reset --soft HEAD~1
 	back = reset --hard HEAD^
+    corrige = --ammend
 [user]
 	name = Guido
 	email = guidopercu@gmail.com
