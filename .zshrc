@@ -25,7 +25,7 @@ alias vermemoria="free -h | grep -v 'cache:' | grep -v 'Swap:'"
 alias iplocal= "ip a s wlan0 | awk -F'[/ ]+' '/inet[^6]/{print $3}'"
 alias atualizateste="git checkout teste ; git pull origin teste"
 alias atualizamaster="git checkout master ; git pull origin master"
-alias migrationcompleta="echo 'Atualizando Banco Principal' ; ./yiic migrate ; echo 'Atualizando Banco Teste' ; ./yiic migrate --connectionID=testDb"
+alias migrationcompleta="echo '\x1b[34;1mAtualizando Banco Principal \x1b[0m' ; ./yiic migrate --interactive=0 ; echo '\x1b[34;1mAtualizando Banco Teste\x1b[0m' ; ./yiic migrate --connectionID=testDb --interactive=0"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
