@@ -22,6 +22,7 @@ alias gmaster="git checkout master"
 alias criarbranch="git checkout -b"
 alias gstat="git status"
 alias vermemoria="free -h | grep -v 'cache:' | grep -v 'Swap:'"
+alias iplocal= "ip a s wlan0 | awk -F'[/ ]+' '/inet[^6]/{print $3}'"
 alias atualizateste="git checkout teste ; git pull origin teste"
 alias atualizamaster="git checkout master ; git pull origin master"
 alias migrationcompleta="echo 'Atualizando Banco Principal' ; ./yiic migrate ; echo 'Atualizando Banco Teste' ; ./yiic migrate --connectionID=testDb"
@@ -82,4 +83,6 @@ export PATH="/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 #PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-#fortune
+export WORKON_HOME=$HOME/Documentos/virtualenvs/
+export PROJECT_HOME=$HOME/Documentos/Projetos/
+source /usr/local/bin/virtualenvwrapper.sh
