@@ -99,8 +99,3 @@ set tabstop=4
 set autoindent
 " lets vim make an educated guess based on the content of the previous line.
 set smartindent
-
-Bundle 'joonty/vim-phpqa.git'
-
-" Set the codesniffer args
-" let g:phpqa_codesniffer_args = "--standard=PSR2"
