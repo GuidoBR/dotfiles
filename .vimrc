@@ -99,3 +99,9 @@ set tabstop=4
 set autoindent
 " lets vim make an educated guess based on the content of the previous line.
 set smartindent
+
+" Força arquivos para encode ISO
+set fileencoding=iso-8859-1
+
+" F5 checa a sintaxe do arquivo PHP salvo.
+map <F5> :!php -l %<CR>
