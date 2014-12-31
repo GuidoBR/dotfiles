@@ -11,15 +11,9 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " Keep Plugin commands between vundle#begin/end.
-Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
 Plugin 'kien/ctrlp.vim'
-Plugin 'tpope/vim-surround'
-Plugin 'klen/python-mode'
 Plugin 'StanAngeloff/php.vim'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'bling/vim-airline'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -106,3 +100,8 @@ set autoindent
 " lets vim make an educated guess based on the content of the previous line.
 set smartindent
 
+" Força arquivos para encode ISO
+set fileencoding=iso-8859-1
+
+" F5 checa a sintaxe do arquivo PHP salvo.
+map <F5> :!php -l %<CR>
