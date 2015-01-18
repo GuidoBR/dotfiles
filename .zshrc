@@ -28,6 +28,8 @@ alias atualizamaster="git checkout master ; git pull origin master"
 alias migrationcompleta="echo '\x1b[34;1mAtualizando Banco Principal \x1b[0m' ; ./yiic migrate --interactive=0 ; echo '\x1b[34;1mAtualizando Banco Teste\x1b[0m' ; ./yiic migrate --connectionID=testDb --interactive=0 ; echo '\x1b[34;1mAtualizando Banco Phactory \x1b[0m' ; ./yiic migrate --connectionID=phactoryDb --interactive=0"
 alias migrationdowncompleta="echo '\x1b[34;1mAtualizando Banco Principal \x1b[0m' ; ./yiic migrate down ; echo '\x1b[34;1mAtualizando Banco Teste\x1b[0m' ; ./yiic migrate down --connectionID=testDb ; echo '\x1b[34;1mAtualizando Banco Phactory \x1b[0m' ; ./yiic migrate down --connectionID=phactoryDb"
 alias acessarhomol="ssh fidel@homologacao.fidelize.com.br -L 54321:127.0.0.1:5432 -v"
+alias codecept="../vendor/bin/codecept"
+alias deployheroku="git push heroku master ; heroku ps:scale web=1 ; heroku logs"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -88,3 +90,6 @@ export PATH="/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/
 export WORKON_HOME=$HOME/Documentos/virtualenvs/
 export PROJECT_HOME=$HOME/Documentos/Projetos/
 #source /usr/local/bin/virtualenvwrapper.sh
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
