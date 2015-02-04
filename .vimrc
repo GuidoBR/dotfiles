@@ -66,8 +66,8 @@ set showmatch
 """""""""""""""""""
 " Cores e Fontes
 """""""""""""""""""
-colorscheme elflord
-set background=dark
+colorscheme solarized
+set background=light
 
 " Usar UTF-8 por padrão
 set encoding=utf8
@@ -101,7 +101,7 @@ set autoindent
 set smartindent
 
 " Força arquivos para encode ISO
-set fileencoding=iso-8859-1
+" set fileencoding=iso-8859-1
 
 " F5 checa a sintaxe do arquivo PHP salvo.
 map <F5> :!php -l %<CR>
