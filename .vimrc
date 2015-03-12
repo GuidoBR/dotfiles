@@ -14,6 +14,8 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'kien/ctrlp.vim'
 Plugin 'StanAngeloff/php.vim'
+Plugin 'klen/python-mode'
+" Plugin 'tpope/vim-rails'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -31,10 +33,10 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 " Melhorando a pesquisa (modo /)
-set hlsearch
-set incsearch
-set ignorecase
-set smartcase
+set incsearch  " Highlight while searching
+set hlsearch   " Highlight all matches after entering search pattern
+set ignorecase " Case insensitive
+set smartcase  " Overides ignorecase if pattern contains upcase
 
 " Linhas de contexto ao redor do cursor
 set scrolloff=2
@@ -42,8 +44,9 @@ set scrolloff=2
 " Mostra na linha de status, a linha e coluna onde o cursor está localizado
 set ruler
 
-" Exibir o número das linhas
-set number
+" Exibir o número relativo das linhas. Útil para ajudar na
+" movimentação/deleção sem precisar ficar contando
+set relativenumber
 
 " Exibir o menu para autocompletar
 set wildmenu
