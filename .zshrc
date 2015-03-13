@@ -1,5 +1,10 @@
 source ~/.zprezto/init.zsh
 
+# Tmux autostart
+if command -v tmux>/dev/null; then
+      [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
+  fi
+
 alias zshconfig="vim ~/.zshrc"
 alias lsd="ls -lrth --group-directories-first"
 alias trabalha="yiic worker umTrabalho"
