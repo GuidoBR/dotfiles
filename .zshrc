@@ -21,7 +21,8 @@ alias atualizamaster="git checkout master ; git pull origin master"
 alias migrationcompleta="echo '\x1b[34;1mAtualizando Banco Principal \x1b[0m' ; ./yiic migrate --interactive=0 ; echo '\x1b[34;1mAtualizando Banco Teste\x1b[0m' ; ./yiic migrate --connectionID=testDb --interactive=0 ; echo '\x1b[34;1mAtualizando Banco Phactory \x1b[0m' ; ./yiic migrate --connectionID=phactoryDb --interactive=0"
 alias migrationdowncompleta="echo '\x1b[34;1mAtualizando Banco Principal \x1b[0m' ; ./yiic migrate down ; echo '\x1b[34;1mAtualizando Banco Teste\x1b[0m' ; ./yiic migrate down --connectionID=testDb ; echo '\x1b[34;1mAtualizando Banco Phactory \x1b[0m' ; ./yiic migrate down --connectionID=phactoryDb"
 alias acessarhomol="ssh webadm@homologacao.fidelize.com.br"
-alias codecept="../vendor/bin/codecept"
+alias codecept="vendor/bin/codecept"
+alias rodatestes="vendor/bin/codecept run"
 alias deployheroku="git push heroku master ; heroku ps:scale web=1 ; heroku logs"
 
 ### Added by the Heroku Toolbelt
