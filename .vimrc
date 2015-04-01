@@ -69,7 +69,7 @@ set showmatch
 """""""""""""""""""
 " Cores e Fontes
 """""""""""""""""""
-colorscheme solarized
+" colorscheme solarized
 set background=dark
 
 " Usar UTF-8 por padrão
