@@ -6,6 +6,8 @@ if command -v tmux>/dev/null; then
   fi
 
 alias zshconfig="vim ~/.zshrc"
+alias atualizazsh="source ~/.zshrc"
+alias atualizavim="source ~/.vimrc"
 alias lsd="ls -lrth --group-directories-first"
 alias trabalha="yiic worker umTrabalho"
 alias naotrabalha="yiic worker limpaFila"
