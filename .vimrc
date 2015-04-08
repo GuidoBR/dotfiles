@@ -12,10 +12,10 @@ Plugin 'gmarik/Vundle.vim'
 
 " Keep Plugin commands between vundle#begin/end.
 Plugin 'tpope/vim-fugitive'
-Plugin 'kien/ctrlp.vim'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'klen/python-mode'
-" Plugin 'tpope/vim-rails'
+Plugin 'zhaocai/GoldenView.Vim'
+Plugin 'kien/ctrlp.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
