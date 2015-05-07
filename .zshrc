@@ -26,6 +26,7 @@ alias acessarhomol="ssh webadm@homologacao.fidelize.com.br"
 alias codecept="vendor/bin/codecept"
 alias rodatestes="vendor/bin/codecept run"
 alias deployheroku="git push heroku master ; heroku ps:scale web=1 ; heroku logs"
+alias rank="sort | uniq -c | sort -nr"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
