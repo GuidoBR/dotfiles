@@ -3,6 +3,7 @@
 	back = reset --hard HEAD^
     corrige = commit --ammend
     author = log --format=%an
+	s = status -s
 [user]
 	name = Guido
 	email = guidopercu@gmail.com
