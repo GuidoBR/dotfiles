@@ -1,36 +1,110 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
+set nocompatible
+filetype off
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
 
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
 
-" Keep Plugin commands between vundle#begin/end.
-Plugin 'tpope/vim-fugitive'
-Plugin 'StanAngeloff/php.vim'
-Plugin 'klen/python-mode'
-Plugin 'zhaocai/GoldenView.Vim'
-Plugin 'kien/ctrlp.vim'
+" The bundles you install will be listed here
+Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Bundle 'tpope/vim-fugitive'
+Bundle 'scrooloose/nerdtree'
+Bundle 'klen/python-mode'
+Bundle 'davidhalter/jedi-vim'
+Bundle 'kien/ctrlp.vim'
+Bundle 'msanders/snipmate.vim'
+Bundle 'spf13/PIV'
+Bundle "lepture/vim-jinja"
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
+filetype plugin indent on
+
+" Changing leader key (default is \)
+let mapleader = ","
+
+" The rest of your config follows here
+augroup vimrc_autocmds
+	autocmd!
+	" highlight characters past column 120
+	autocmd FileType python highlight Excess ctermbg=DarkGrey guibg=Red
+	autocmd FileType python match Excess /\%120v.*/
+	autocmd FileType python set nowrap
+	augroup END
+
+" Powerline setup
+set guifont=Hack
+set laststatus=2
+set term=xterm-256color
+
+" NERD Tree
+map <F2> :NERDTreeToggle<CR>
+
+" Python-mode
+" Activate rope
+" Keys:
+" " K             Show python docs
+" " <Ctrl-Space>  Rope autocomplete
+" " <Ctrl-c>g     Rope goto definition
+" " <Ctrl-c>d     Rope show documentation
+" " <Ctrl-c>f     Rope find occurrences
+" " <Leader>b     Set, unset breakpoint (g:pymode_breakpoint enabled)
+" [[            Jump on previous class or function (normal, visual,  operator modes)
+" ]]            Jump on next class or function (normal, visual, operator modes)
+" [M            Jump on previous class or method (normal, visual, operator modes)
+" ]M            Jump on next class or method (normal, visual, operator modes)
+let g:pymode_rope = 0 
+
+" Documentation
+let g:pymode_doc = 1
+let g:pymode_doc_key = 'K'
+
+"Linting
+let g:pymode_lint = 1
+let g:pymode_lint_checker = "pyflakes,pep8"
+" Auto check on save
+let g:pymode_lint_write = 1
+
+" Support virtualenv
+let g:pymode_virtualenv = 1
+
+" Enable breakpoints plugin
+let g:pymode_breakpoint = 1
+let g:pymode_breakpoint_bind = '<leader>b'
+
+" syntax highlighting
+let g:pymode_syntax = 1
+let g:pymode_syntax_all = 1
+let g:pymode_syntax_indent_errors = g:pymode_syntax_all
+let g:pymode_syntax_space_errors = g:pymode_syntax_all
+
+" Autofold code
+let g:pymode_folding = 1 
+
+" I prefer spaces to tabs
+set tabstop=4
+set shiftwidth=4
+set expandtab
+" Be smart when using tabs ;)
+set smarttab
+
+" indent when moving to the next line while writing code
+set autoindent
+" lets vim make an educated guess based on the content of the previous line.
+set smartindent
+
+" show line numbers
+set number
+
+" when using the >> or << commands, shift lines by 4 spaces
+set shiftwidth=4
+
+" show a visual line under the cursor's current line 
+set cursorline
+
+" show the matching part of the pair for [] {} and ()
+set showmatch
 
 " Melhorando a pesquisa (modo /)
 set incsearch  " Highlight while searching
@@ -38,45 +112,15 @@ set hlsearch   " Highlight all matches after entering search pattern
 set ignorecase " Case insensitive
 set smartcase  " Overides ignorecase if pattern contains upcase
 
-" Linhas de contexto ao redor do cursor
-set scrolloff=2
-
-" Mostra na linha de status, a linha e coluna onde o cursor está localizado
-set ruler
-
-" Exibir o número relativo das linhas. Útil para ajudar na
-" movimentação/deleção sem precisar ficar contando
-set relativenumber
-
-" Exibir o menu para autocompletar
-set wildmenu
-
-" Modo de autocompletar similar ao do bash
-set wildmode=longest,list
-
 " Ignorar arquivos compilados, backups, etc.
 set wildignore=*.o,*~,*.pyc
 
-" Aumentando a quantidade de comandos que o VIM se lembra
-set history =500
 " Tratar linhas longas como se fossem duas linhas. Útil na hora de mover entre elas
 map j gj
 map k gk
 
-" tells vim to show you matching opening or closing brackets when you step on a bracket with your cursor.
-set showmatch
-
-"""""""""""""""""""
-" Cores e Fontes
-"""""""""""""""""""
 " colorscheme solarized
 set background=dark
-
-" Usar UTF-8 por padrão
-set encoding=utf8
-
-" Usar como padrão o tipo de arquivo Unix
-set ffs=unix,dos,mac
 
 """""""""""""""""""
 " Backups e arquivos temporários
@@ -85,26 +129,4 @@ set nobackup
 set nowb
 set noswapfile
 
-"""""""""""""""""""
-" Identação 
-"""""""""""""""""""
-" Usar espaços ao invés de TABs
-set expandtab
 
-" Be smart when using tabs ;)
-set smarttab
-
-" 1 TAB equivale a 4 espaços
-set shiftwidth=4
-set tabstop=4
-
-" tells vim to use the previous line's indent level to set the indent level of the new lines.
-set autoindent
-" lets vim make an educated guess based on the content of the previous line.
-set smartindent
-
-" Força arquivos para encode ISO
-" set fileencoding=iso-8859-1
-
-" F5 checa a sintaxe do arquivo PHP salvo.
-map <F5> :!php -l %<CR>

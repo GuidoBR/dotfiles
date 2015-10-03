@@ -25,8 +25,18 @@ alias migrationdowncompleta="echo '\x1b[34;1mAtualizando Banco Principal \x1b[0m
 alias acessarhomol="ssh webadm@homologacao.fidelize.com.br"
 alias codecept="vendor/bin/codecept"
 alias rodatestes="vendor/bin/codecept run"
+alias anchorloansvenv="source /home/guido/Documents/Projects/AnchorLoans/venv/bin/activate"
 alias deployheroku="git push heroku master ; heroku ps:scale web=1 ; heroku logs"
 alias rank="sort | uniq -c | sort -nr"
+alias python2="ipython"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+### Added by the Google App Engine SDK
+export GAE_SDK=/usr/bin/google_appengine
+export PATH=$PATH:$GAE_SDK
+
+if [[ -r ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then
+	source ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+fi
