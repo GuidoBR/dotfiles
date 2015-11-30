@@ -10,7 +10,7 @@
 
 " COLORS
 """""""""""""""
-        colorscheme badwolf
+        " colorscheme badwolf
         " colorscheme molokai
         " colorscheme solarized
 
@@ -52,6 +52,10 @@
 """""""""""""""
         let g:ctrlp_match_window = 'bottom,order:ttb'
         let g:ctrlp_switch_buffer = 0
+
+" NERDTree
+"""""""""""""""
+map <F2> :NERDTreeToggle<CR>
 
 " BACKUP
 """""""""""""""
