@@ -55,7 +55,33 @@
 
 " NERDTree
 """""""""""""""
-map <F2> :NERDTreeToggle<CR>
+        map <F2> :NERDTreeToggle<CR>
+        let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
+
+" YouCompleteMe
+"""""""""""""""
+        " My leader key is mapped to space, so space-g will goto definition of
+        " whatever I’m currently on. Helpful when exploring new code.
+        let g:ycm_autoclose_preview_window_after_completion=1
+        map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+" GeekNote
+"""""""""""""""
+        noremap <F8> :Geeknote<cr>
+        " let g:GeeknoteFormat="markdown"
+" VirtualEnv
+"""""""""""""""
+"python with virtualenv support
+py << EOF
+import os
+import sys
+if 'VIRTUAL_ENV' in os.environ:
+        project_base_dir = os.environ['VIRTUAL_ENV']
+        activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+        execfile(activate_this, dict(__file__=activate_this))
+EOF
 
 " BACKUP
 """""""""""""""
+        set nobackup
+        set noswapfile
