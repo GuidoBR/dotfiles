@@ -166,12 +166,12 @@ bar {
 	mode dock
 	workspace_buttons yes
 	binding_mode_indicator yes
-	font pango: Hack 12 
+	font pango: Hack 10 
 	colors {
 		separator #FFBC0A
 			background #336699
 			statusline #605c5a
-			# class		   border       backgrd 	text
+			# class	    	   border       backgrd 	text
 			focused_workspace  #161616  	#336699  	#ffffff
 			active_workspace   #161616  	#161616  	#a5a5a5
 			inactive_workspace #161616  	#545454  	#a5a5a5
