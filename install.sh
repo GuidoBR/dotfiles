@@ -5,7 +5,7 @@ echo "Installing Git..."
 ln -sv .git ~/.git
 # -----------------------------------
 echo "Installing PostgreSQL..."
-ln -sv .psqlrc ~/.psqlrc 
+ln -sv .psqlrc ~/.psqlrc
 # -----------------------------------
 echo "Installing Tmux..."
 ln -sv .tmux.conf ~/.tmux.conf
